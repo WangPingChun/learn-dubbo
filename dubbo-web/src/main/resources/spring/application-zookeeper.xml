@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>zookeeper和spring容器结合,启动项目加载的时候建立和zookeeper的连接</description>
+
+    <!-- zookeeper重试策略 -->
+    <bean id="retryPolicy" class="org.apache.curator.retry.RetryNTimes">
+        <!-- 重试次数 -->
+        <constructor-arg index="0" value="3"/>
+        <!-- 每次间隔 -->
+        <constructor-arg index="1" value="5000"/>
+    </bean>
+
+    <!-- zookeeper客户端 -->
+    <bean id="client" class="org.apache.curator.framework.CuratorFrameworkFactory" factory-method="newClient"
+          init-method="start">
+        <!-- zookeeper服务地址 -->
+        <constructor-arg index="0" value="101.132.47.22:2181,118.24.105.155:2181,111.231.115.63:2181"/>
+        <!-- sessionTimeout会话超时时间 -->
+        <constructor-arg index="1" value="15000"/>
+        <!-- connectionTimeoutMS 创建连接超时时间 -->
+        <constructor-arg index="2" value="5000"/>
+        <constructor-arg index="3" ref="retryPolicy"/>
+    </bean>
+
+
+    <!-- 注入zookeeper客户端 -->
+    <bean id="zkCurator" class="com.imooc.web.curator.util.ZkCurator" init-method="init">
+        <constructor-arg index="0" ref="client"/>
+    </bean>
+
+    <bean id="distributedLock" class="com.imooc.web.curator.util.DistributedLock" init-method="init">
+        <constructor-arg index="0" ref="client"/>
+    </bean>
+</beans>

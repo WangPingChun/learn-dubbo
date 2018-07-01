@@ -16,5 +16,5 @@
                      init="true"/>
 
     <!-- 监控服务注册 -->
-    <dubbo:monitor protocol="registry"/>
+    <!--<dubbo:monitor protocol="registry"/>-->
 </beans>
