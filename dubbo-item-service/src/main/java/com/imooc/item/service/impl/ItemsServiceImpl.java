@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @author : chris
  * 2018-06-30
  */
-@Service
+@Service("itemsService")
 public class ItemsServiceImpl implements ItemsService {
     private final ItemsMapper itemsMapper;
 

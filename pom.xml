@@ -11,6 +11,8 @@
     <modules>
         <module>dubbo-item-api</module>
         <module>dubbo-item-service</module>
+        <module>dubbo-order-api</module>
+        <module>dubbo-order-service</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
