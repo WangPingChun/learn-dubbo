@@ -1,0 +1,73 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.idea
+*.iml
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.DS_Store
+.idea/
+dubbo-item-api/src/main/resources/
+dubbo-item-api/src/test/
+dubbo-item-api/target/generated-sources/
+dubbo-item-api/target/maven-archiver/
+dubbo-item-api/target/maven-status/
+dubbo-item-service/src/test/
+dubbo-item-service/target/classes/jdbc/
+dubbo-item-service/target/classes/mybatis/
+dubbo-item-service/target/classes/spring/
+dubbo-item-service/target/dubbo-item-service/META-INF/
+dubbo-item-service/target/dubbo-item-service/WEB-INF/classes/jdbc/
+dubbo-item-service/target/dubbo-item-service/WEB-INF/classes/mybatis/
+dubbo-item-service/target/dubbo-item-service/WEB-INF/classes/spring/
+dubbo-item-service/target/dubbo-item-service/WEB-INF/web.xml
+dubbo-item-service/target/generated-sources/
+dubbo-item-service/target/maven-archiver/
+dubbo-item-service/target/maven-status/
+learn-dubbo-common/src/main/resources/
+learn-dubbo-common/src/test/
+learn-dubbo-common/target/generated-sources/
+learn-dubbo-common/target/maven-archiver/
+learn-dubbo-common/target/maven-status/
+learn-dubbo-mapper/src/main/resources/
+learn-dubbo-mapper/src/test/
+learn-dubbo-mapper/target/classes/com/imooc/mapper/ItemsMapper.xml
+learn-dubbo-mapper/target/classes/com/imooc/mapper/OrdersMapper.xml
+learn-dubbo-mapper/target/generated-sources/
+learn-dubbo-mapper/target/maven-archiver/
+learn-dubbo-mapper/target/maven-status/
+learn-dubbo-pojo/src/main/resources/
+learn-dubbo-pojo/src/test/
+learn-dubbo-pojo/target/generated-sources/
+learn-dubbo-pojo/target/maven-archiver/
+learn-dubbo-pojo/target/maven-status/
+learn-dubbo-service-item/src/main/resources/
+learn-dubbo-service-item/src/test/
+learn-dubbo-service-order/src/main/resources/
+learn-dubbo-service-order/src/test/
+learn-dubbo-service-order/target/generated-sources/
+learn-dubbo-service-order/target/maven-archiver/
+learn-dubbo-service-order/target/maven-status/
+learn-dubbo-web/src/main/webapp/
+learn-dubbo-web/src/test/

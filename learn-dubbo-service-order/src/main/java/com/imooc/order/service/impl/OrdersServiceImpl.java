@@ -35,6 +35,7 @@ public class OrdersServiceImpl implements OrdersService {
         final String oid = UUID.randomUUID().toString().replace("-", "");
         Orders orders = new Orders();
         orders.setId(oid);
+        orders.setOrderNum(oid);
         orders.setItemId(itemId);
         ordersMapper.insert(orders);
 

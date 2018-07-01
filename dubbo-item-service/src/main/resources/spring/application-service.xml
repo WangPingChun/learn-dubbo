@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 为当前服务器提供者取个名字,并且提供给注册中心 -->
+    <dubbo:application name="dubbo-item-service"/>
+
+    <!-- 注册中心配置,使用zk暴露服务 -->
+    <dubbo:registry protocol="zookeeper" address="101.132.47.22:2181,118.24.105.155:2181,111.231.115.63:2181"/>
+
+    <!-- 定义暴露服务的端口号 -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <!-- 暴露具体的服务接口 -->
+    <dubbo:service retries="3" interface="com.imooc.item.service.ItemsService" ref="itemService"/>
+</beans>

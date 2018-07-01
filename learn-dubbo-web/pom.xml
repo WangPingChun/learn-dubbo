@@ -15,12 +15,12 @@
 
         <dependency>
             <groupId>com.imooc.dubbo</groupId>
-            <artifactId>learn-dubbo-service-item</artifactId>
+            <artifactId>learn-dubbo-com.imooc.item.service-item</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.imooc.dubbo</groupId>
-            <artifactId>learn-dubbo-service-order</artifactId>
+            <artifactId>learn-dubbo-com.imooc.item.service-order</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
@@ -55,7 +55,7 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <port>8080</port>
+                    <port>80</port>
                     <path>/</path>
                     <useBodyEncodingForURI>true</useBodyEncodingForURI>
                     <uriEncoding>UTF-8</uriEncoding>

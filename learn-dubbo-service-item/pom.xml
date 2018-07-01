@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>learn-dubbo-service-item</artifactId>
+    <artifactId>learn-dubbo-com.imooc.item.service-item</artifactId>
 
     <dependencies>
         <dependency>
