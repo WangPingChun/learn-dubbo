@@ -53,9 +53,9 @@ public class DistributedLock {
                         .withMode(CreateMode.PERSISTENT)
                         .withACL(ZooDefs.Ids.OPEN_ACL_UNSAFE)
                         .forPath("/" + ZK_LOCK_PROJECT);
-                // 针对zk的分布式锁节点,创建相应的watcher事件监听
-                addWatcherToLock("/" + ZK_LOCK_PROJECT);
             }
+            // 针对zk的分布式锁节点,创建相应的watcher事件监听
+            addWatcherToLock("/" + ZK_LOCK_PROJECT);
         } catch (Exception e) {
             log.error("客户端连接zookeeper服务器错误... 请重试...");
         }
