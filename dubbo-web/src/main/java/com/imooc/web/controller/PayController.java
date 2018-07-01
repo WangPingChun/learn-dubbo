@@ -32,7 +32,7 @@ public class PayController {
     @GetMapping("/buy")
     public ImoocJsonResult docGetLogin(String itemId) {
         if (StringUtils.isNotBlank(itemId)) {
-            clusterService.doBuyItem(itemId);
+            clusterService.displayBuy(itemId);
         } else {
             return ImoocJsonResult.errorMsg("商品id不能为空");
         }

@@ -1,21 +1,11 @@
 package com.imooc.order.mapper;
 
 import com.imooc.order.pojo.Orders;
+import tk.mybatis.mapper.common.Mapper;
 
 /**
  * @author chris
  */
-public interface OrdersMapper {
+public interface OrdersMapper extends Mapper<Orders> {
 
-    int deleteByPrimaryKey(String id);
-
-    int insert(Orders record);
-
-    int insertSelective(Orders record);
-
-    Orders selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(Orders record);
-
-    int updateByPrimaryKey(Orders record);
 }

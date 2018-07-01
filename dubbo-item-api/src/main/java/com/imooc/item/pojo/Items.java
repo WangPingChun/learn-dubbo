@@ -1,17 +1,21 @@
 package com.imooc.item.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
 /**
  * @author : chris
  * 2018-06-30
  */
 public class Items {
+
+    @Id
     private String id;
 
     private String name;
 
     private Integer counts;
-
-    private Integer buyCounts;
 
     public String getId() {
         return id;
@@ -36,14 +40,4 @@ public class Items {
     public void setCounts(Integer counts) {
         this.counts = counts;
     }
-
-    public Integer getBuyCounts() {
-        return buyCounts;
-    }
-
-    public void setBuyCounts(Integer buyCounts) {
-
-        this.buyCounts = buyCounts;
-    }
-
 }

@@ -6,6 +6,7 @@ import com.imooc.web.service.ClusterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,10 +20,11 @@ public class ClusterServiceImpl implements ClusterService {
     private final OrdersService ordersService;
 
     @Autowired
-    public ClusterServiceImpl(ItemsService itemsService, OrdersService ordersService) {
+    public ClusterServiceImpl(@Qualifier("itemsService") ItemsService itemsService, OrdersService ordersService) {
         this.itemsService = itemsService;
         this.ordersService = ordersService;
     }
+
 
     @Override
     public void doBuyItem(String itemId) {

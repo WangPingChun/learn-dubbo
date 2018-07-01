@@ -1,10 +1,15 @@
 package com.imooc.order.pojo;
 
+import com.sun.javafx.beans.IDProperty;
+
+import javax.persistence.Id;
+
 /**
  * @author : chris
  * 2018-06-30
  */
 public class Orders {
+    @Id
     private String id;
 
     private String orderNum;

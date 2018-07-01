@@ -2,22 +2,17 @@ package com.imooc.item.mapper;
 
 
 import com.imooc.item.pojo.Items;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface ItemsMapper {
-
-
-    int deleteByPrimaryKey(String id);
-
-    int insert(Items record);
-
-    int insertSelective(Items record);
-
-
-    Items selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(Items record);
-
-    int updateByPrimaryKey(Items record);
-
+/**
+ * @author chris
+ */
+public interface ItemsMapper extends Mapper<Items> {
+    /**
+     * 更新商品库存.
+     *
+     * @param record
+     * @return
+     */
     int reduceCounts(Items record);
 }

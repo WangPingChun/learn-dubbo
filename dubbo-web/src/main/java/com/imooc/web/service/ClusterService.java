@@ -11,5 +11,10 @@ public interface ClusterService {
      */
     void doBuyItem(String itemId);
 
+    /**
+     *
+     * @param itemId
+     * @return
+     */
     boolean displayBuy(String itemId);
 }

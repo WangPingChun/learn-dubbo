@@ -34,7 +34,6 @@ public class ItemsServiceImpl implements ItemsService {
     public void displayReduceCount(String itemId, int buyCounts) {
         final Items items = new Items();
         items.setId(itemId);
-        items.setBuyCounts(buyCounts);
         itemsMapper.reduceCounts(items);
     }
 }

@@ -23,6 +23,4 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- 属性文件不能跨容器,要在controller中也能访问到,也需要配置 -->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
 </beans>
