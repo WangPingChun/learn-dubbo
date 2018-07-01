@@ -28,6 +28,6 @@
     </tx:advice>
     <!-- 切面 -->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.imooc.item.service..*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.imooc.order.service..*.*(..))"/>
     </aop:config>
 </beans>

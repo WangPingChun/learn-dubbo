@@ -28,6 +28,6 @@
 
     <!-- 配置扫描包,加载mapper代理对象 -->
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.imooc.item.mapper"/>
+        <property name="basePackage" value="com.imooc.order.mapper"/>
     </bean>
 </beans>

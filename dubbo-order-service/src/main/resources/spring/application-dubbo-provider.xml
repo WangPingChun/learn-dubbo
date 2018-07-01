@@ -5,15 +5,15 @@
        xmlns:aop="http://www.springframework.org/schema/aop" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <!-- 为当前服务器提供者取个名字,并且提供给注册中心 -->
-    <dubbo:application name="dubbo-item-service"/>
+    <dubbo:application name="dubbo-order-service"/>
 
     <!-- 注册中心配置,使用zk暴露服务 -->
     <dubbo:registry protocol="zookeeper" address="101.132.47.22:2181,118.24.105.155:2181,111.231.115.63:2181"/>
 
     <!-- 定义暴露服务的端口号 -->
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="dubbo" port="20881"/>
 
     <!-- 暴露具体的服务接口 -->
-    <dubbo:service retries="3" interface="com.imooc.item.service.ItemsService" ref="itemsService"/>
+    <dubbo:service retries="3" interface="com.imooc.order.service.OrdersService" ref="ordersService"/>
 
 </beans>
